@@ -26,29 +26,6 @@ function showSuccess(input) {
    formControl.className = 'form-control success';
 }
 
-//function to check if email is valid ?
-function isValidEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-}
-
-// function to check if required feilds have data
-function checkRequired(inputArray) {
-    inputArray.forEach(function(input){
-       //console.log(input.value);
-       if (input.value === '') {
-           console.log(input.id);
-           showError(input,`${getFeildId(input)} is required`);
-       } else {
-           showSuccess(input);
-       }
-    });
-}
-
-//function to get the id of the input feild with proper case
-function getFeildId(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
 
 //Event Listners in last
 // Create Event Listener for submit button
@@ -57,5 +34,36 @@ form.addEventListener('submit',function(e) {
     e.preventDefault();
     //console.log(username.value);
 
-    checkRequired([username,email,password,password2]);
+    //check if username input is empty?
+    if(username.value === '' ) {
+        showError(username, 'Username is required');
+    }
+    else{
+        showSuccess(username);
+    }
+
+//check if email input is empty?
+if(email.value === '' ) {
+    showError(email, 'Email is required');
+}
+else{
+    showSuccess(email);
+}
+
+//check if password input is empty?
+if(password.value === '' ) {
+    showError(password, 'Password is required');
+}
+else{
+    showSuccess(password);
+}
+
+//check if Confirm Password input is empty?
+if(password2.value === '' ) {
+    showError(password2, 'Confirm Passsword is required');
+}
+else{
+    showSuccess(password2);
+}
+
 });
