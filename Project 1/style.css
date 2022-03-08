@@ -45,7 +45,7 @@ h2{
 }
 
 .form-control input{
-    border: 2px solid c ;
+    border: 2px solid cadetblue ;
     border-radius: 5px;
     display: block;
     width: 100%;
@@ -55,5 +55,5 @@ h2{
 
 .form-control input:focus {
     outline: 0;
-    border-color:cadetblue;
+    border-color:#ef96c5;
 }
