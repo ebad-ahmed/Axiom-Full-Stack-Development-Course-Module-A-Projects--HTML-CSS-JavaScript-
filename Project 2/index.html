@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection at Movie Theater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="movie-container">
+        <label>Please Select Your Movie</label>
+        <select id="movie">
+            <option value="800">Batman 2022 (800pkr)</option>
+            <option value="900">Spider Man No Way Home 3D (900pkr)</option>
+            <option value="900">Doctor Strange Multiverse of Madness 3D (900pkr)</option>
+            <option value="800">Morbius (800pkr)</option>
+            <option value="800">Black Adam (800pkr)</option>
+            <option value="900">The Flash 3D (900pkr)</option>
+        </select>
+    </div>
+    
+   <ul class="legend">
+       <li>
+           <div class="seat"></div>
+           <small>Available</small>
+       </li>
+
+       <li>
+           <div class="seat selected"></div>
+           <small>Selected</small>
+       </li>
+
+       <li>
+           <div class="seat occupied"></div>
+           <small>Occupied</small>
+       </li>
+   </ul>
+
+ <div class="container">
+       <div class="screen"></div>
+       <div class="row">
+           <div class="seat"></div>
+           <div class="seat occupied"></div>
+           <div class="seat occupied"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+           <div class="seat"></div>
+       </div>
+
+       <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+    </div>
+
+    <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+    </div>
+
+    <div class="row">
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+    </div>
+</div>
+
+<p class="text">
+    You have selected <span class="count">0</span> seats for a total price of <span class="total">0</span> pkr.
+</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
