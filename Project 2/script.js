@@ -15,7 +15,7 @@ function updateSelectedCount() {
     const seatsIndex = [...selectedSeats].map(function(seat) {
         return [...seats].indexOf(seat)
     });
-    console.log(seatsIndex);
+    console.log(seatsIndex); // 0.58
     const selectedSeatsCount = selectedSeats.length; 
     //console.log(selectedSeatsCount);
     count.innerText = selectedSeatsCount;
