@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="progress.css">
+    <script src="https://kit.fontawesome.com/6647a4b121.js" crossorigin="anonymous"></script>
+    <title>Custom Video Player</title>
+</head>
+<body>
+    <h1>Custom Video Player</h1>
+    <!-- This is video player. Poster attribute gives the thumbnail and src gives location of actual video -->
+    <video src="Video/batman trailer.mov" id="video" class="screen" poster="Vid.image/batman poster.jpg"></video>
+    <!-- Adding Customs controls for the video player -->
+    <div class="controls">
+        <!-- this is play button -->
+        <button class="btn" id="play">
+            <!-- this is font awesome play icon -->
+            <i class="fa fa-play fa-2x"></i>
+        </button> 
+        <!-- this is stop button -->
+        <button class="btn" id="stop">
+            <!-- this is font awesome stop icon -->
+            <i class="fa fa-stop fa-2x"></i>
+        </button>
+        <!-- this is progress bar -->
+        <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0" />
+        <span class="timestamp" id="timestamp">00:00</span>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
