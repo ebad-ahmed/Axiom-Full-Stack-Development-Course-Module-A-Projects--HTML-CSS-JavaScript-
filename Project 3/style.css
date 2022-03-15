@@ -23,10 +23,11 @@ h1{
 .screen{
     cursor: pointer;
     width: 60%;
-    background-color: black;
+    background-color: whitesmoke;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px ;
 }
+
 
 .controls{
     background-color:whitesmoke;
@@ -55,13 +56,19 @@ h1{
 }
 
 .controls .fa-pause{
-    color: black;
+    color:rgb(42, 112, 218);
 }
 
 .controls .timestamp {
     color: black;
     font-weight: bold;
     margin-left: 10px;
+}
+
+.controls .totaltime{
+    color:black;
+    font-weight: bold;
+    
 }
 
 @media(max-width: 800px) {
