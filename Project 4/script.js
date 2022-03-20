@@ -35,13 +35,13 @@ function calculate() {
     //Update the DOM to display the conversion rate
     rate.innerText = `1 ${currencyOneCode} = ${conversionRate} ${currencyTwoCode}`;
     
-    //Update the currency two amount
-    amountCurrencyTwo.value = (amountCurrencyOne.value * conversionRate).toFixed(2);
-
+    // Formatting Currency Two Amount
+    const amount2 = new Intl.NumberFormat('en-US', { style: 'currency', currency: currencyTwoCode }).format((amountCurrencyOne.value * conversionRate).toFixed(2));
+    // Updating DOM
+    amountCurrencyTwo.value = amount2;
+    
     });
-
 };
-
 
 //Event Listeners
 //Recalculate exchnage rate when currency 1 changes
@@ -50,14 +50,21 @@ currencyOne.addEventListener('change', calculate);
 //Recalculate exchange amount whe currency amount 1 changes
 amountCurrencyOne.addEventListener('input', calculate);
 
-
 //Recalculate exchnage rate when currency 2 changes
 currencyTwo.addEventListener('change', calculate);
 
 //Recalculate exchange amount whe currency amount 2 changes
 amountCurrencyTwo.addEventListener('input', calculate);
 
-
-
+swap.addEventListener('click', () => {
+    //Save value of currency one code to temp variable 
+    const temp = currencyOne.value;
+    //coppy currency two code to currency one
+    currencyOne.value = currencyTwo.value;
+    //copy currency one code form temp variable to currency two
+    currencyTwo.value = temp;
+    //recalculate exchange rate after swap
+    calculate();
+})
 //Execute calculate function on page load
 calculate();
