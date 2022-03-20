@@ -21,7 +21,25 @@ const swap =  document.getElementById('swap');
 
 //Fetch Exchange rates and update the DOM
 function calculate() {
-    console.log('success');
+    const currencyOneCode = currencyOne.value;
+    const currencyTwoCode = currencyTwo.value;
+    //console.log(currencyOneCode,currencyTwoCode);
+
+    //Send Request to Excahnge Rate API for conversion rates for currency one
+    fetch(`https://v6.exchangerate-api.com/v6/d73245b002d2d961fd52567e/pair/${currencyOneCode}/${currencyTwoCode}`)
+        .then(res => res.json())
+        .then(data => {
+    //Get the conversion rate from Currency one to currency two
+    const conversionRate = data.conversion_rate;
+         
+    //Update the DOM to display the conversion rate
+    rate.innerText = `1 ${currencyOneCode} = ${conversionRate} ${currencyTwoCode}`;
+    
+    //Update the currency two amount
+    amountCurrencyTwo.value = (amountCurrencyOne.value * conversionRate).toFixed(2);
+
+    });
+
 };
 
 
