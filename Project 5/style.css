@@ -76,6 +76,6 @@ h3{
 .user{
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
