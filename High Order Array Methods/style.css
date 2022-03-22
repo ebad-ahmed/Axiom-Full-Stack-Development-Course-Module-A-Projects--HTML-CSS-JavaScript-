@@ -52,6 +52,10 @@ button:hover {
 main{
     flex: 1;
     padding: 10px 20px;
+    /*background-color: rgb(255, 0, 68);
+    margin-left: 20px;
+    color: #25252A;
+    font-weight: bold;*/
 }
 
 h2{
@@ -64,13 +68,15 @@ h2{
 }
 
 h3{
-    background-color: white;
-    border-bottom: 1px solid white;
+    background-color:rgb(255, 0, 68);
+    /*border-bottom: 1px solid white;*/
     display: flex;
     padding: 10px;
     justify-content: space-between;
     font-weight: bold;
     margin: 20px 0 0;
+    outline: none;
+    border-radius: 4px;
 }
 
 .user{
