@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Landing Page with Sliding Menu and Modal Window</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./ebad.png" alt="profile pic">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+
+    <header>
+        <button  class="toggle" id="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Ebad's Landing Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, officiis!</p>
+        <button class="cta-btn" id="open">Sign Up</button>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Who is Ebad ?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi illo vel, aperiam, dolores ipsum ratione maiores ab alias harum similique commodi id corrupti magnam ut. Consequatur corporis id optio illo!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat ipsum maiores nihil dolorem. Nulla, blanditiis dignissimos sequi placeat corporis aliquid!</p>
+        
+        <h2>Learn More</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius nulla eveniet excepturi nisi, commodi aliquid accusamus at mollitia, recusandae atque veritatis. Et voluptates officiis eligendi numquam esse ad culpa reprehenderit itaque quibusdam, sit nobis pariatur voluptate nam. Maiores veritatis distinctio excepturi alias esse deleniti nemo molestiae repellat laudantium ad.</p>
+
+        <h2>Projects</h2>
+        <ul>
+        <li style="list-style: none;"> 1.  <a href="../Form Validator/index.html" target="_blank">HTML Form Validator</a></li>
+        <li style="list-style: none;"> 2.  <a href="../Seat Selector/index.html" target="_blank">Seat Selection at Movie Theatre</a></li>
+        <li style="list-style: none;"> 3.  <a href="../Video Player 101/index.html" target="_blank">Video Player</a></li>
+        <li style="list-style: none;"> 4.  <a href="../Currency Exchange/index.html" target="_blank">Exchange Rate Calculator</a></li>
+        <li style="list-style: none;"> 5.  <a href="../High Order Array Methods/index.html" target="_blank">High Order Array Methods</a></li>
+        <li style="list-style: none;"> 5.  <a href="../Landing Page with Sliding Menu and Modal Window/index.html" target="_blank">Landing Page with Sliding Menu and Modal Window</a></li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut perspiciatis placeat consequuntur, praesentium iste, nam necessitatibus fuga inventore assumenda incidunt! Corrupti, ullam debitis est ipsa quae nisi nesciunt voluptatum eius vero facilis magni voluptate quisquam aperiam ducimus soluta minima ex saepe delectus architecto rem ipsam reprehenderit repudiandae eos. Veniam quam magni alias saepe natus quidem eveniet sed dicta voluptatem fugit repellat voluptatibus, quo quibusdam incidunt sunt consectetur necessitatibus repudiandae.</p>
+   
+        <!-- Modal -->
+        <div class="modal-container" id="modal">
+            <div class="Modal">
+                <Button class="close-btn" id="close">
+                    <i class="fa fa-times"></i>
+                </Button>
+                <div class="modal-header">
+                    <h3>Sign Up</h3>
+                </div>
+                <div class="modal-container">
+                    <p>Contact me</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
