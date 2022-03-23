@@ -1,0 +1,11 @@
+*{
+    background-color:seagreen;
+    color:white;
+}
+
+.figure-container{
+    fill: transparent;
+    stroke: white;
+    stroke-width: 5px;
+    stroke-linecap: round;
+}
