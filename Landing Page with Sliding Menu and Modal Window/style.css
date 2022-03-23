@@ -222,3 +222,10 @@ button:hover{
         opacity: 1;
     }
 }
+
+
+@media(max-width: 800px) {
+    .container {
+        width: 90%;
+    }
+}
