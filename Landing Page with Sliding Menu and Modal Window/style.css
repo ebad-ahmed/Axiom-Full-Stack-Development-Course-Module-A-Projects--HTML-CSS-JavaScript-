@@ -1,37 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:ital@0;1&family=Questrial&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-:root{
-    --modul-duration : 1s ;
-    --primary-color : #86C232 ;
-    --secondary-color : #6B6E70 ;
+:root {
+    --modal-duration: 1s;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Ubuntu', sans-serif ;
+body {
+    font-family: 'Lato', sans-serif;
     margin: 0;
-    /*background-color: #222629;*/
+    transition: transform 0.5s ease;
+    background-color: #222629;
+    color: white;
 }
 
-nav{
-    background-color: var(--primary-color);
-    border-right: 2px solid rgba(200, 200, 200, 0.1);
+body.show-nav {
+    transform: translate(200px);
+}
+
+nav {
+    background-color: #222629;
+    border-right: 2px solid rgba(200,200,200,0.1);
     color: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 200px;
-    height: 100vh;
+    height: 100%;
     z-index: 100;
-    transform: translateX(-100%);  
+    transform: translateX(-100%);
 }
 
-nav .logo{
+nav .logo {
     padding: 30px 0;
     text-align: center;
+    border: #474B4F;
 }
 
 nav .logo img {
@@ -40,36 +45,37 @@ nav .logo img {
     border-radius: 50%;
 }
 
-nav ul{
+nav ul {
     padding: 0;
     list-style-type: none;
     margin: 0;
 }
 
-nav ul li{
-    border-bottom: 2px solid var(--secondary-color);
+nav ul li {
+    border-bottom: 2px solid rgba(12, 12, 12, 0.185);
     padding: 20px;
 }
 
-nav ul li:first-of-type{
-    border-top: 2px solid var(--secondary-color);
+nav ul li:first-of-type {
+    border-top: 2px solid rgba(12, 12, 12, 0.185);
 }
 
 nav ul li a {
-    color: #474B4F;
+    color: white;
     text-decoration: none;
 }
 
-nav ul li a:hover{
-    /*text-decoration: underline;*/
-    color: black;
+nav ul li a:hover {
+    /* text-decoration: underline; */
+    color: #474B4F;
 }
 
-header{
-    background-color:#61892F ;
-    font-size: 150%;
+header {
+    background-color: #61892f;
+    color: white;
+    font-size: 120%;
     position: relative;
-    padding: 40px 15px;
+    padding: 25px 15px;
     text-align: center;
 }
 
@@ -77,58 +83,142 @@ header h1 {
     margin: 0;
 }
 
-header p{
+header p {
     margin: 30px 0;
 }
 
-button{
-   background-color: #474B4F;
-   border-radius: 5px;
-   color:black;
-   cursor: pointer;
-   padding: 8px 10px;
+button {
+    background-color:#222629 ;
+    border: 0;
+    border-radius: 5px;
+    color:white;
+    cursor: pointer;
+    padding: 8px 10px;
 }
 
-button:focus{
+button:focus {
     outline: none;
 }
 
-.toggle{
-    background-color:rgba(0, 0, 0, 0.3);
+button:hover{
+    font-size: medium;
+}
+
+.toggle {
+    background-color: rgba(0,0,0,0.3);
     position: absolute;
+    color: white;
     top: 20px;
     left: 20px;
 }
 
-.ctn-btn{
-    padding: 10px 30px;
-    font-size: 24px;
+.cta-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 15px;
 }
 
-.container{
+.container {
     padding: 15px;
     margin: 0 auto;
     max-width: 100%;
     width: 800px;
 }
 
-.modal-container{
-    background-color: rgba(0, 0, 0, 0.6);
+.modal-container {
+    background-color: rgba(0,0,0,0.6);
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-   /* display: none;*/
+    display: none;
 }
 
-.modal{
+.modal-container.show-modal{
+    display: block;
+}
+
+.modal {
     background-color: white;
-    border-radius: 10px ;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     position: absolute;
     overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 400px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header{
+    background-color: #86C232;
+    color:white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-header h3{
+    margin: 0;
+    /* border-bottom: 1px solid var(--secondary-color); */
+}
+
+.modal-content{
+    padding: 20px;
+    color: #86C232;
+}
+
+.modal-form div{
+    margin: 15px 0;
+    color:black;
+}
+
+.modal-forml label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form input{
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+}
+
+.close-btn{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+    color: white;
+}
+
+.submit-btn{
+    background-color: #86C232;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.submit-btn:hover {
+  /* color: #222629; */
+  font-weight: bold;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
